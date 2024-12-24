@@ -50,18 +50,6 @@ export default function CrearPedidoFormulario() {
   const [obras, setObras] = useState<Obra[]>([]);
   const [productos, setProductos] = useState<Producto[]>([]);
   const [detallesPedido, setDetallesPedido] = useState<DetallePedido[]>([]);
-  // const [detalle, setDetalle] = useState<DetallePedido>({
-  //   producto: {
-  //     id: 0,
-  //     nombre: '',
-  //     descripcion: '',
-  //     precio: 0
-  //   },
-  //   cantidad: 0,
-  //   precioUnitario: 0,
-  //   descuento: 0,
-  //   precioFinal: 0
-  // });
 
     const [formData, setFormData] = useState<PedidoRequest>({
       cliente: {
@@ -306,7 +294,6 @@ const agregarProducto = () => {
           name="cantidad"
           onChange={handleCantidadChange}
           value={cantidad}
-          min="1"
           className="w-full p-2 border rounded text-gray-700 bg-gray-200"
         />
       </div>

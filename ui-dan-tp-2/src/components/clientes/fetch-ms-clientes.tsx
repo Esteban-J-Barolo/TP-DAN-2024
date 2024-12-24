@@ -78,7 +78,7 @@ export async function fetchClientesCreate(basePath: string, clienteActualizado: 
 
 export async function fetchClientesDelete(basePath: string, id: number): Promise<boolean> {
         try {
-                const response = await fetch(`http://localhost/clientes/api/clientes/${id}`, {
+                const response = await fetch(`${basePath}/clientes/api/clientes/${id}`, {
                         method: "DELETE",
                         headers: {
                         "Content-Type": "application/json",
